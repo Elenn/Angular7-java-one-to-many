@@ -1,0 +1,7 @@
+ #ignore node files
+ui/node/
+ui/node_modules/
+resource/target/
+/ui/target/
+
+.project
