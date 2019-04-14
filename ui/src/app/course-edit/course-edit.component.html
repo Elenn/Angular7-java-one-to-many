@@ -1,0 +1,15 @@
+<div  *ngIf="course" class="row"> 
+  <div class="left update-course">
+    <div class="left"> 
+      <input class="form-control" [(ngModel)]="course.name" placeholder="Course Name" />
+    </div>
+    <div class="left">
+      <input class="form-control" [(ngModel)]="course.description" placeholder="Course Description" />
+    </div>
+    <div class="left">
+      <button class="btn btn-info add" (click)="updateCourse(course); course.name.value='';course.description.value=''">
+         Update
+      </button>
+    </div>
+  </div>
+</div>

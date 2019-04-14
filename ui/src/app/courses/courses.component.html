@@ -1,0 +1,20 @@
+<div class="department-list">
+  <div>List of Courses:</div>
+  <div class="courses" *ngFor="let course of courses">
+    <div class="left department-list-item">
+      <div class="course-item left">{{course.id}}</div>
+      <div class="course-item left">{{course.name}}</div>
+      <div class="course-item left">{{course.description}}</div>
+      <div class="course-item left">{{course.assignedDepartment.departmentName}}</div>
+      <a routerLink="/course/{{course.id}}">
+        <div class="btn btn-info edit">
+          Edit
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+ 
+
+

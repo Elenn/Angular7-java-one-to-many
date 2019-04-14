@@ -1,0 +1,84 @@
+.department-list {
+  padding-top: 15px;
+}
+
+.left {
+  display: inline-block;
+}
+
+.margin-left-15 {
+  margin-left: 14px;
+}
+
+.department-list-item {
+  background-color: #EEE;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.department-name {
+  color: #888;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
+  padding: 8px;
+}
+
+.departments { 
+  list-style-type: none;
+  padding: 0;
+}
+
+.edit {
+  margin-left: 240px;
+  margin-top: -68px;
+}
+
+.add {
+  margin: -5px 0 0 0px;
+}
+
+.add-new-course-btn {
+  margin: -67px 0 0 4px;
+}
+
+.users .list-users {
+  position: relative;
+  cursor: pointer;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0.2em;
+  height: 2.6em;
+  border-radius: 4px;
+}
+
+
+
+  .users button {
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: Arial;
+  }
+
+    .users button:hover {
+      background-color: #cfd8dc;
+    }
+
+    .users button.delete {
+      position: relative;
+      left: 220px;
+      top: -21px;
+      background-color: gray !important;
+      color: white;
+    }
+
+    .users button.edit {
+      position: relative;
+      left: 140px;
+      top: -21px;
+      background-color: gray !important;
+      color: white;
+    }

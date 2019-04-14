@@ -1,0 +1,8 @@
+.left {
+  display: inline-block;
+}
+
+.course-item { 
+  width: 200px;
+  padding: 8px;
+}

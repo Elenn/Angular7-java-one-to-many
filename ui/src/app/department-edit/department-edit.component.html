@@ -1,0 +1,19 @@
+<div *ngIf="department" class="row">
+  <div class="col-md-6 margin-top-15"> <input class="form-control" [(ngModel)]="department.departmentName" /></div>
+  <div class="col-md-4 margin-top-15">
+    <button class="btn btn-info edit" (click)="updateDepartment(department)">Update Department Name</button>
+  </div> 
+  <div class="left add-course">
+    <div class="left">
+      <input class="form-control" [(ngModel)]="courseData.name" placeholder="Course Name" />
+    </div>
+    <div class="left">
+      <input class="form-control" [(ngModel)]="courseData.description" placeholder="Course Description" />
+    </div>
+    <div class="left">
+      <button class="btn btn-info add" (click)="addCourse(department); courseData.name.value='';courseData.description.value=''">
+        Add Course to {{department.departmentName}} Department:
+      </button>
+    </div>
+  </div>
+</div>

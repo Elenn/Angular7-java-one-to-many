@@ -1,0 +1,29 @@
+<div class="department-list"  >
+  <div>List of Departments:</div>
+  <div class="departments" *ngFor="let department of departments">
+    <div class="left department-list-item">
+      <div class="department-name">{{department.departmentName}}</div>  
+      <a routerLink="/department/{{department.id}}">
+        <div class="btn btn-info edit">
+          Edit
+        </div>
+        <div class="btn btn-info add-new-course-btn">
+          Add New Course to {{department.departmentName}} Department
+        </div>
+      </a> 
+    </div> 
+  </div>
+</div>
+
+<div class="add-new-user">
+  <p>Add New Department:</p>
+  <label>
+    Department name:
+    <input class="form-control" name="departmentName" #departmentName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="btn btn-info add" name="addDepartment" (click)="addDepartment(departmentName.value); departmentName.value=''">
+    add
+  </button>
+</div>
+
