@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id; 
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -24,7 +25,11 @@ public class Course
 	private String description;	
 	 
 	@ManyToOne
-	private Department assignedDepartment;   
+	private Department assignedDepartment; 
+    
+    @ManyToMany(mappedBy = "coursesList")
+	@JsonIgnore
+	private Set<Student> student = new HashSet<>();
 	
 	public Course(){
 		
@@ -40,7 +45,20 @@ public class Course
 		this.description =  description;
 		//this.assignedDepartment = new Department(departmentName);
 	}
-     
+    
+    public Set<Student> getStudent()
+	{
+		return student;
+	}
+
+	/**
+	 * @param todoList the todoList to set
+	 */
+	public void setStudent(Set<Student> student)
+	{
+		this.student = student;
+	}
+
 	/**
 	 * @return the id
 	 */
